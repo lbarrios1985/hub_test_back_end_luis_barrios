@@ -43,7 +43,9 @@ Route::delete('proveedor/{proveedor}', 'ProveedorController@delete');
 
 // Actualizar inventario (entrada y salida)
 Route::post('inventario/entrada', 'CompraController@register');
+Route::post('inventario/salida', 'VentaController@register');
 
 // Listado de Ventas
+Route::get('ventas', 'VentaController@list');
 
 // Cierre de inventario (por fecha)

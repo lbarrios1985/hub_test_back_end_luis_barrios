@@ -17,7 +17,7 @@ class CreateInventarioTiendasTable extends Migration
             $table->increments('id');
             $table->integer('producto_id')->unsigned();
             $table->integer('tienda_id')->unsigned();
-            $table->integer('cantidad');
+            $table->integer('cantidad')->default(0);
             $table->foreign('producto_id')->references('id')->on('productos');
             $table->foreign('tienda_id')->references('id')->on('tiendas');
             $table->timestamps();
