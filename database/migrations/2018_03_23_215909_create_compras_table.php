@@ -18,7 +18,6 @@ class CreateComprasTable extends Migration
             $table->integer('producto_id')->unsigned();
             $table->integer('proveedor_id')->unsigned();
             $table->integer('tienda_id')->unsigned();
-            $table->string('fecha');
             $table->integer('cantidad');
             $table->foreign('producto_id')->references('id')->on('productos');
             $table->foreign('proveedor_id')->references('id')->on('proveedors');
